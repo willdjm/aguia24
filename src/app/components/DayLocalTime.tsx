@@ -1,19 +1,22 @@
 "use client"
 
-export function DiaHorario() {
+export function DayLocalTime() {
 
 return (
-<section id="WherDeDoISell"
-      className="bg-[url('/bg-dia-horario.png')] md:bg-cover bg-contain bg-no-repeat flex justify-center items-center py-20 h-full px-4">
+<section id="DayLocalTime"
+      className="bg-[url('/bg-dia-horario.png')] md:bg-cover  bg-no-repeat flex justify-center items-center py-20 h-full px-4">
       <div className='flex items-center justify-center md:max-w-6xl w-full '>
 
-            <div className="flex flex-col items-center justify-center w-full md:gap-64 gap-20">
+            <div className="flex flex-col items-center justify-center w-full md:gap-64 gap-10">
 
-                  <picture>
+                  <picture className="hidden md:block">
                         <img src="/img-corrida.png" alt="" />
                   </picture>
+                  <picture className="block md:hidden">
+                        <img src="/img-corrida-mobile.png" alt="" />
+                  </picture>
 
-                  <div className="flex items-center justify-center w-full bg-blue-700/90 max-w-6xl rounded-full py-10">
+                  <div className="flex items-center justify-center w-full bg-blue-700/90 max-w-6xl md:rounded-full rounded-md py-10">
                         <div className="md:flex md:flex-row flex flex-col items-center justify-center w-full gap-20 md:gap-0">
                               <div className="w-full flex flex-col items-center justify-center gap-5">
                                     <p className="text-orange-500 text-3xl font-bold">Dia</p>
@@ -30,11 +33,10 @@ return (
                                     <p className="text-white text-3xl">Das 14h</p>
                                     <p className="text-white text-3xl">às 17h</p>
                               </div>
-  
                         </div>
                   </div>
 
-                  <div className="md:flex md:flex-row flex flex-col items-start justify-center w-full max-w-6xl md:mt-40 gap-20 md:gap-0">
+                  <div className="md:flex md:flex-row flex flex-col items-start justify-center w-full max-w-6xl md:my-40 gap-20 md:gap-0">
 
                         <div className="w-full flex flex-col items-center justify-center gap-10">
                               <p className="text-orange-500 text-3xl font-bold">Apoio</p>
@@ -63,7 +65,6 @@ return (
                                     <img src="/logo-gukenz.png" alt="" />
                               </picture> */}
                         </div>
-
                   </div>
             </div>
 

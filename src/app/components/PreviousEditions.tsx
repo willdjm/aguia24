@@ -24,11 +24,11 @@ export const PreviousEditions = () => {
   return (
     <section className="bg-[url('/bg-edicoes-anteriores.png')] bg-no-repeat bg-contain md:bg-right-top flex justify-center items-center py-32 px-4">
       <div className="flex flex-col items-center justify-center gap-10 md:max-w-6xl w-full">
-<div className='flex flex-col items-center justify-center py-10'>
-<h2 className=" text-orange-500 font-bold md:text-2xl text-3xl text-center">Confira imagens de algumas </h2>
-<h2 className=" text-orange-500 font-bold md:text-5xl text-3xl text-center">edições anteriores</h2>
-</div>
-        <div className="relative flex justify-center mb-6 gap-5">
+        <div className='flex flex-col items-center justify-center py-10 rounded-md'>
+          <h2 className=" text-orange-500 font-bold md:text-2xl text-4xl text-center">Confira imagens de algumas </h2>
+          <h2 className=" text-orange-500 font-bold md:text-5xl text-3xl text-center">edições anteriores</h2>
+        </div>
+        <div className="relative flex justify-center mb-6 md:gap-5 gap-1">
           <button
             onClick={() => handleYearChange('2022')}
             className={`relative h-40 w-40 rounded-full transition-transform transform ${year === '2022' ? 'bg-blue-700 text-white font-bold text-4xl scale-110' : 'bg-orange-500 text-white font-bold text-4xl scale-95'}`}

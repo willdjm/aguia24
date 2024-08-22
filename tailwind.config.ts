@@ -18,7 +18,8 @@ const config: Config = {
           700: '#1E00FF'
         },
         'orange': {
-          500: '#FF9001'
+          500: '#FF9001',
+          600: '#FF7E00',
         },
         'Amber': {
           500: '#FFAA01'

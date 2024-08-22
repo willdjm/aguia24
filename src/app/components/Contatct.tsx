@@ -87,27 +87,30 @@ export function Contact() {
 
         <div id="contact" className=" flex flex-col justify-center items-center">
 
-            <picture>
+            <picture className='hidden md:block'>
                 <img src="/img-form.png" alt="" className='' />
             </picture>
+            <picture className='block md:hidden'>
+                <img src="/img-form-mobile.png" alt="" className='' />
+            </picture>
 
-            <div className='md:justify-between flex flex-col justify-items-center w-full md:gap-10 bg-neutral-100'>                
+            <div className='md:justify-between flex flex-col justify-items-center w-full md:gap-10 bg-neutral-100'>
 
                 <div>
                     <div className="flex flex-col items-center justify-center">
 
-                    <div className="p-6 lg:p-0 mr-2 sm:rounded-lg md:mt-10">
-                    <h3 className="text-orange-500 text-2xl font-bold text-center">
-                        Formulário de
-                    </h3>
-                    <h3 className="text-orange-500 text-5xl font-bold text-center">
-                        Inscrição
-                    </h3>
-                    <p className="text-black text-center md:py-5 max-w-md">
-                        Preencha corretamente todos os campos.
-                        Após o envio, você receberá um e-mail de confirmação e orientações de participação.
-                    </p>
-                </div>   
+                        <div className="p-3 lg:p-0 mr-2 sm:rounded-lg md:mt-10">
+                            <h3 className="text-orange-500 text-2xl font-bold text-center">
+                                Formulário de
+                            </h3>
+                            <h3 className="text-orange-500 text-5xl font-bold text-center">
+                                Inscrição
+                            </h3>
+                            <p className="text-black text-center md:py-5 py-3 max-w-md font-medium">
+                                Preencha corretamente todos os campos.
+                                Após o envio, você receberá um e-mail de confirmação e orientações de participação.
+                            </p>
+                        </div>
 
                         <div className="px-6 flex flex-col justify-center gap-3 py-10 w-full max-w-xl">
 
@@ -116,7 +119,7 @@ export function Contact() {
                                     <li className='w-full'>
                                         <div>
                                             <input
-                                                className='peer border border-indigo-700 text-inborder-indigo-700 placeholder:text-inborder-indigo-700 focus:border-indigo-700 block min-h-[auto] w-full rounded-md py-2 px-3 outline-none shadow-md placeholder:text-indigo-700/50 text-indigo-700'
+                                                className='peer border border-neutral-100 text-inborder-neutral-100 placeholder:text-inborder-neutral-100 focus:border-neutral-100 block min-h-[auto] w-full rounded-md py-2 px-3 outline-none shadow-md placeholder:text-black/50 text-black'
                                                 type="text" {...register("name")} placeholder='Nome' />
                                             {errors.name && <p className='text-sm italic text-red-500 flex flex-1 pl-1'>
                                                 {errors?.name?.message}</p>}
@@ -127,10 +130,8 @@ export function Contact() {
                                 {/* Opções de rádio para gênero */}
                                 <ul className='flex mb-4'>
                                     <li className='w-full'>
-                                        <div className='flex items-center justify-between peer border bg-white border-indigo-700 text-inborder-indigo-700 placeholder:text-inborder-indigo-700 focus:border-indigo-700 min-h-[auto] w-full rounded-md py-2 px-3 outline-none shadow-md placeholder:text-indigo-700/50 text-indigo-700'>
-
-                                            <label className='block font-medium text-indigo-700'>Sexo</label>
-
+                                        <div className='flex items-center justify-between peer border bg-white border-neutral-100 text-inborder-neutral-100 placeholder:text-inborder-neutral-100 focus:border-neutral-100 min-h-[auto] w-full rounded-md py-2 px-3 outline-none shadow-md placeholder:text-black/50 text-black'>
+                                            <label className='block font-normal text-black'>Sexo</label>
                                             <div className='flex items-center'>
                                                 <label className='mr-4'>
                                                     <input
@@ -161,23 +162,23 @@ export function Contact() {
                                 <ul className='flex mb-4'>
                                     <li className='w-full'>
                                         <div>
-                                        <label className='block font-medium text-indigo-700'>Data de Nascimento:</label>
+                                            <label className='block font-normal text-sm text-black'>Data de Nascimento:</label>
 
 
                                             <input
-                                                className='peer border border-indigo-700 text-inborder-indigo-700 placeholder:text-inborder-indigo-700 focus:border-indigo-700 block min-h-[auto] w-full rounded-md py-2 px-3 outline-none shadow-md placeholder:text-indigo-700/50 text-indigo-700'
+                                                className='peer border border-neutral-100 text-inborder-neutral-100 placeholder:text-inborder-neutral-100 focus:border-neutral-100 block min-h-[auto] w-full rounded-md py-2 px-3 outline-none shadow-md placeholder:text-black/50 text-black'
                                                 type="date" {...register("birthdate")} placeholder='Data de Nascimento' />
                                             {errors.birthdate && <p className='text-sm italic text-red-500 flex flex-1 pl-1'>
                                                 {errors?.birthdate?.message}</p>}
                                         </div>
                                     </li>
                                 </ul>
-                                
+
                                 <ul className='flex mb-4'>
                                     <li className='w-full'>
                                         <div>
                                             <input
-                                                className='peer border border-indigo-700 text-inborder-indigo-700 placeholder:text-inborder-indigo-700 focus:border-indigo-700 block min-h-[auto] w-full rounded-md py-2 px-3 outline-none shadow-md placeholder:text-indigo-700/50 text-indigo-700'
+                                                className='peer border border-neutral-100 text-inborder-neutral-100 placeholder:text-inborder-neutral-100 focus:border-neutral-100 block min-h-[auto] w-full rounded-md py-2 px-3 outline-none shadow-md placeholder:text-black/50 text-black'
                                                 type="text" {...register("whatsapp")} placeholder='Celular' />
                                         </div>
                                     </li>
@@ -187,7 +188,7 @@ export function Contact() {
                                     <li className='w-full'>
                                         <div>
                                             <input
-                                                className='peer border border-indigo-700 text-inborder-indigo-700 placeholder:text-inborder-indigo-700 focus:border-indigo-700 block min-h-[auto] w-full rounded-md py-2 px-3 outline-none shadow-md placeholder:text-indigo-700/50 text-indigo-700'
+                                                className='peer border border-neutral-100 text-inborder-neutral-100 placeholder:text-inborder-neutral-100 focus:border-neutral-100 block min-h-[auto] w-full rounded-md py-2 px-3 outline-none shadow-md placeholder:text-black/50 text-black'
                                                 type="email" {...register("email")} placeholder='E-mail' />
                                         </div>
                                         {errors.email && <p className='text-sm italic text-red-500 flex flex-1 pl-1'>
@@ -200,7 +201,7 @@ export function Contact() {
                                     <li className='w-full'>
                                         <div>
                                             <select
-                                                className='peer border border-indigo-700 text-inborder-indigo-700 focus:border-indigo-700 block min-h-[auto] w-full rounded-md py-2 px-3 outline-none shadow-md placeholder:text-indigo-700/50 text-indigo-700'
+                                                className='peer border border-neutral-100 text-inborder-neutral-100 focus:border-neutral-100 block min-h-[auto] w-full rounded-md py-2 px-3 outline-none shadow-md placeholder:text-black/50 text-black'
                                                 {...register("race")}
                                             >
                                                 <option value="">Selecione a distância</option>
@@ -219,7 +220,7 @@ export function Contact() {
                                     <li className='w-full'>
                                         <div>
                                             <select
-                                                className='peer border border-indigo-700 text-inborder-indigo-700 focus:border-indigo-700 block min-h-[auto] w-full rounded-md py-2 px-3 outline-none shadow-md placeholder:text-indigo-700/50 text-indigo-700'
+                                                className='peer border border-neutral-100 text-inborder-neutral-100 focus:border-neutral-100 block min-h-[auto] w-full rounded-md py-2 px-3 outline-none shadow-md placeholder:text-black/50 text-black'
                                                 {...register("tshirtSize")}
                                             >
                                                 <option value="">Selecione o tamanho da camiseta</option>
@@ -248,16 +249,13 @@ export function Contact() {
                                     </li>
                                 </ul>
 
-
-
                                 <ul className='flex pb-20'>
                                     <li className='flex w-full justify-end'>
                                         <button
-                                            className='text-white flex items-center justify-center bg-indigo-700 focus:ring-4 focus:outline-none rounded-md text-lg p-3 px-6 w-full lg:w-32 text-center disabled:cursor-not-allowed disabled:opacity-50'
+                                            className='text-white flex items-center justify-center bg-blue-700 focus:ring-4 focus:outline-none rounded-full text-lg p-3 px-6 w-full lg:w-40 text-center disabled:cursor-not-allowed disabled:opacity-50'
                                             type='submit' disabled={!isValid}>
                                             {formLoader && <img src="/loader.svg" alt="Carregando" width={30} height={20} />}
                                             <span>ENVIAR</span>
-
                                         </button>
                                     </li>
                                 </ul>
