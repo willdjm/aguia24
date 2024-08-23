@@ -14,7 +14,7 @@ import { VideoBanner } from "./components/VideoBanner";
 export default function Home() {
   return (
 <main>
-  <Navbar/>
+<Navbar/>
 <VideoBanner/>
 <DayLocalTime/>
 <Route/>
@@ -24,7 +24,6 @@ export default function Home() {
 <MedalsAndTrophy/>
 <PreviousEditions/>
 <Footer />
-
 </main>
   )
 }

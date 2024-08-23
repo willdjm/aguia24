@@ -85,7 +85,7 @@ export function Contact() {
 
     return (
 
-        <div id="contact" className=" flex flex-col justify-center items-center">
+        <div className=" flex flex-col justify-center items-center">
 
             <picture className='hidden md:block'>
                 <img src="/img-form.png" alt="" className='' />
@@ -94,7 +94,7 @@ export function Contact() {
                 <img src="/img-form-mobile.png" alt="" className='' />
             </picture>
 
-            <div className='md:justify-between flex flex-col justify-items-center w-full md:gap-10 bg-neutral-100'>
+            <div id="contact" className='md:justify-between flex flex-col justify-items-center w-full md:gap-10 bg-neutral-100'>
 
                 <div>
                     <div className="flex flex-col items-center justify-center">

@@ -8,7 +8,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Desafio Aguia 2024",
+  title: "Desafio Águia 2024",
 };
 
 export default function RootLayout({
